@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5479292865813520627}
   - component: {fileID: 3735792120398997932}
   m_Layer: 0
-  m_Name: Suelo
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5bbc63a04b395ea4e9c9aedb25fe4988, type: 2}
+  - {fileID: 2100000, guid: 31c9a4f5b4b0306498f0e75e5bb8bafd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

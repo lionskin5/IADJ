@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1075008439998441261}
   - component: {fileID: 5526130594614743247}
   - component: {fileID: 1567685962369075593}
-  - component: {fileID: 4257820598956986131}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -64,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d79f2046e4570b74ebb1ef69f5aa1b31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,19 +108,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4257820598956986131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273190893537905161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b88d71116a6b5419aa741bd3a83681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 2
 --- !u!1 &1542306397357807715
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,9 +149,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 824419351554199568}
-  - component: {fileID: 2021025393981180133}
+  - component: {fileID: 6711792894372204865}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Seek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,7 +173,7 @@ Transform:
   - {fileID: 4127456067042436164}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2021025393981180133
+--- !u!114 &6711792894372204865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,9 +182,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3575012214531906017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b88d71116a6b5419aa741bd3a83681, type: 3}
+  m_Script: {fileID: 11500000, guid: f3362b434e5bee64b842cd811d976f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   velocity: 2
 --- !u!1 &6920209088623348006
 GameObject:
@@ -262,7 +249,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d79f2046e4570b74ebb1ef69f5aa1b31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
