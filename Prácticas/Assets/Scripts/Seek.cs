@@ -24,4 +24,19 @@ public class Seek : MonoBehaviour
         // Avanzar de acuerdo a la velocidad establecida
         transform.position += newDirection * velocity * Time.deltaTime;
     }
+
+    private void OnDrawGizmos ()
+    // El gizmo: una línea en la dirección del objetivo
+    {
+        // Origen de la línea
+        Vector3 from = transform.position;
+        // Destino de la línea
+        Vector3 to = transform.localPosition + (target.position - transform.position) * velocity;
+        // Elevación para no tocar el suelo
+        Vector3 elevation = new Vector3 (0 , 1 , 0) ;
+        from = from + elevation;
+        to = to + elevation;
+        Gizmos.DrawLine (from , to);
+    }
+
 }
