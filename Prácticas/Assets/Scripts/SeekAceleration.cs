@@ -40,16 +40,11 @@ public class Seek1 : MonoBehaviour
         from = from + elevation;
         to = to + elevation;
 
-        Debug.Log("Velocidad: " + velocity);
-        Debug.Log("From: " + from);
-        Debug.Log("To: " + to);
-
         Gizmos.color = Color.yellow;   // Mirando en la dirección de la velocidad.
         Gizmos.DrawLine(from, to);
 
         Gizmos.color = Color.red;   // Mirando en la dirección de la orientación.
         Vector3 direction = transform.TransformDirection(Vector3.forward) * 5;
-        Debug.Log("Direction: " + direction);
         Gizmos.DrawRay(from, direction);
 
     }

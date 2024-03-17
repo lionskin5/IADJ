@@ -15,7 +15,7 @@ public class Seek : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         // Diferencia de posiciones entre el objetivo y este objeto.
         Vector3 newDirection = target.position - transform.position;
@@ -25,7 +25,7 @@ public class Seek : MonoBehaviour
         transform.position += newDirection * velocity * Time.deltaTime;
     }
 
-    private void OnDrawGizmos ()
+    private void OnDrawGizmos()
     // El gizmo: una línea en la dirección del objetivo
     {
         // Origen de la línea
@@ -33,10 +33,10 @@ public class Seek : MonoBehaviour
         // Destino de la línea
         Vector3 to = transform.localPosition + (target.position - transform.position) * velocity;
         // Elevación para no tocar el suelo
-        Vector3 elevation = new Vector3 (0 , 1 , 0) ;
+        Vector3 elevation = new Vector3(0 , 1 , 0);
         from = from + elevation;
         to = to + elevation;
-        Gizmos.DrawLine (from , to);
+        Gizmos.DrawLine(from, to);
     }
 
 }

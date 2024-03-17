@@ -24,7 +24,7 @@ public class CreateObject : MonoBehaviour
 
     public GameObject markSpecial = null;
     
-    private void mark (GameObject thing) {
+    private void mark(GameObject thing) {
         GameObject marker = null;
 
         // If there is a child in the object called Mark
@@ -40,4 +40,5 @@ public class CreateObject : MonoBehaviour
         } else // If there is no reference then
             Destroy(marker); // Destroy the object «« DESTROY
     }
+
 }

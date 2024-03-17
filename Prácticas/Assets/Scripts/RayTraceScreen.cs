@@ -23,7 +23,7 @@ public class RayTraceScreen : MonoBehaviour
             draw (ray, hit); // Dibujar los rayos.
     }
 
-    void draw (Ray ray, RaycastHit hit)
+    void draw(Ray ray, RaycastHit hit)
     {
         // The hit object is not the plane
         string str = hit.transform.gameObject.name;
@@ -33,7 +33,7 @@ public class RayTraceScreen : MonoBehaviour
             Debug.DrawLine(hit.point, hit.point + 20*hit.normal, Color.blue);
         }
         // we will change the color, if possible
-        changeColor ( hit ) ;
+        changeColor(hit);
     }
 
     private GameObject firstThing = null;
@@ -44,7 +44,7 @@ public class RayTraceScreen : MonoBehaviour
     //The original color of the GameObject
     Color m_OriginalColor = Color.green;
 
-    void changeColor (RaycastHit hit)
+    void changeColor(RaycastHit hit)
     {
         string str = hit.transform.gameObject.name;
         if (firstTime && !(str.Equals("Plane") || str.Equals("Quad")))
