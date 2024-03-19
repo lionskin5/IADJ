@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 592226535}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 1254106209}
   - component: {fileID: 1254106208}
   - component: {fileID: 1254106207}
+  - component: {fileID: 1254106211}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -548,6 +549,19 @@ Transform:
   - {fileID: 1940192190}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1254106211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254106206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244173c03ee92c147ab14e3b7878821a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 2
 --- !u!1 &1336996478
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,9 +576,10 @@ GameObject:
   - component: {fileID: 1336996479}
   - component: {fileID: 1336996483}
   - component: {fileID: 1336996484}
+  - component: {fileID: 1336996485}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -698,6 +713,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 0
   material: {fileID: 0}
+--- !u!114 &1336996485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336996478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244173c03ee92c147ab14e3b7878821a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 2
 --- !u!1 &1508427250
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,9 +887,11 @@ GameObject:
   - component: {fileID: 1560456746}
   - component: {fileID: 1560456745}
   - component: {fileID: 1560456749}
+  - component: {fileID: 1560456750}
+  - component: {fileID: 1560456751}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,6 +1009,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1560456750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560456744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244173c03ee92c147ab14e3b7878821a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 2
+--- !u!114 &1560456751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560456744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244173c03ee92c147ab14e3b7878821a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 2
+--- !u!1 &1767729519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767729520}
+  - component: {fileID: 1767729521}
+  m_Layer: 0
+  m_Name: ManagerSelection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767729520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767729519}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.9201908, y: 0.440135, z: -2.1508808}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767729521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767729519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445bc30f2531ded408eb1aac8a233483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1940192189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1064,3 +1164,4 @@ SceneRoots:
   - {fileID: 1560456748}
   - {fileID: 1336996482}
   - {fileID: 1508427254}
+  - {fileID: 1767729520}

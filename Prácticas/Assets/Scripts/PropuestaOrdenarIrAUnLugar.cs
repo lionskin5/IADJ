@@ -17,6 +17,11 @@ using UnityEngine;
 public class PropuestaOrdenarIrAUnLugar : MonoBehaviour
 {
 
+    void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
