@@ -17,6 +17,8 @@ using UnityEngine;
 public class PropuestaOrdenarIrAUnLugar : MonoBehaviour
 {
 
+    public List<GameObject> selectedUnits;
+
     void Start()
     {
         
@@ -40,9 +42,12 @@ public class PropuestaOrdenarIrAUnLugar : MonoBehaviour
                 // Si lo que golpea es un punto del terreno entonces da la orden a todas las unidades NPC
                 if (hitInfo.collider != null && hitInfo.collider.CompareTag("Terrain"))
                 {
-                    Vector3 newTarget = hitInfo.point;
+                   // Vector3 newTarget = hitInfo.point;
 
-                    GameObject[] listNPC = GameObject.FindGameObjectsWithTag("NPC");
+                    Debug.Log("NPCs en la lista: " + selectedUnits.Count);
+                    selectedUnits.Clear();
+
+                  //  GameObject[] listNPC = GameObject.FindGameObjectsWithTag("NPC");
 
                     /**
                      * Otra alternativa es recurrir a una lista pública de todas las unidades seleccionadas
@@ -57,10 +62,10 @@ public class PropuestaOrdenarIrAUnLugar : MonoBehaviour
                      * lo que facilita y agiliza algunas tareas. P.e. para realizar formaciones.
                      */
 
-                    foreach (var npc in listNPC)
+                    foreach (var npc in selectedUnits)
                     {
                         // Llama al método denominado "NewTarget" en TODOS y cada uno de los MonoBehaviour de este game object (npc)
-                        npc.SendMessage("NewTarget", newTarget);
+                    //    npc.SendMessage("NewTarget", newTarget);
 
                         // Se asume que cada NPC tiene varias componentes scripts (es decir, varios MonoBehaviour).
                         // En algunos de esos scripts está la función "NewTarget(Vector3 target)"
@@ -78,7 +83,24 @@ public class PropuestaOrdenarIrAUnLugar : MonoBehaviour
                         // que obtiene la componente del NPC que yo sé que contiene a la función NewTarget(), y la invoca.
                     }
                 }
+                else if (hitInfo.collider.CompareTag("NPC")){
+                    string nameNPC = hitInfo.transform.gameObject.name;
+                    GameObject objectNPC = hitInfo.collider.gameObject;
+                    Debug.Log("NPC tocado: " + nameNPC);
+
+                    if(selectedUnits.Contains(objectNPC)) {
+                        Debug.Log("Eliminando al NPC " + nameNPC);
+                        selectedUnits.Remove(objectNPC);
+                    }
+                    else {
+                        selectedUnits.Add(objectNPC);
+                    }
+
+                }
             }
+        }
+        else if(Input.GetKey(KeyCode.LeftShift)) {
+            Debug.Log("SHIFT pulsado");
         }
     }
 }
